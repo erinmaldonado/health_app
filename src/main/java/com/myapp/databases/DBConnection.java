@@ -1,4 +1,4 @@
-package databases;
+package com.myapp.databases;
 
 import java.sql.*;
 
@@ -9,8 +9,8 @@ import java.sql.*;
  */
 public class DBConnection {
     static String DB_URL = "jdbc:mysql://localhost:3306/";
-    static String DB_USER = "root";
-    static String DB_PASS = "password";
+    static String DB_USER = "test";
+    static String DB_PASS = "test";
     static String dbName = "health_app";
 
     Connection conn = null;
