@@ -12,6 +12,7 @@ public class HomeForm {
     JTextField inputSymptom;
     JButton addSymptom;
     public JPanel homePanel;
+    JComboBox comboBox;
 
     public HomeForm(){
         CategoriesDatabase categoriesDatabase = new CategoriesDatabase();
@@ -34,6 +35,10 @@ public class HomeForm {
         addSymptom.addActionListener(e->{
             String symptom = inputSymptom.getText();
             System.out.println(symptom);
+        });
+
+        comboBox.addActionListener(e->{
+
         });
     }
 
