@@ -82,6 +82,7 @@ public class CreateTables {
         String taskTable = "CREATE TABLE IF NOT EXISTS task " +
                 "(task_id INTEGER not NULL AUTO_INCREMENT, " +
                 " task_name VARCHAR(255), " +
+                " task_duration INTEGER," +
                 " date_id INTEGER, " +
                 " category_id INTEGER, " +
                 " FOREIGN KEY (date_id) REFERENCES date(date_id), " +
@@ -89,6 +90,15 @@ public class CreateTables {
                 " PRIMARY KEY ( task_id ))";
 
         stmt.executeUpdate(taskTable);
+
+        String createTaskCategoriesTable = "CREATE TABLE IF NOT EXISTS task_categories (" +
+                "task_id INT NOT NULL," +
+                "category_id INT NOT NULL,"+
+                "PRIMARY KEY (task_id, category_id)," + "FOREIGN KEY(task_id) REFERENCES task(" +
+                "task_id)," +
+                "FOREIGN KEY (category_id) REFERENCES categories (category_id)" +
+                ")";
+        stmt.executeUpdate(createTaskCategoriesTable);
 
         /**
          * Table for storing symptoms
@@ -108,7 +118,7 @@ public class CreateTables {
 
         String sleepTable = "CREATE TABLE IF NOT EXISTS sleep " +
                 "(sleep_id INTEGER not NULL AUTO_INCREMENT, " +
-                " time_slept INTEGER, " +
+                " sleep_duration INTEGER, " +
                 " sleep_score INTEGER, " +
                 " date_id INTEGER, " +
                 " category_id INTEGER, " +
