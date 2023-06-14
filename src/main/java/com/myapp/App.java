@@ -1,11 +1,11 @@
 package com.myapp;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
 import com.myapp.databases.*;
 import com.myapp.forms.*;
 
 import javax.swing.*;
+import java.sql.SQLException;
 
 public class App {
     public static void main(String[] args) {
@@ -15,8 +15,6 @@ public class App {
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }
-
-// create UI here...
 
         CreateTables createTables = new CreateTables();
         createTables.createDateCategories();

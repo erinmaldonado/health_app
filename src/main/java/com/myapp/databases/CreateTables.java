@@ -83,7 +83,11 @@ public class CreateTables {
                 "(task_id INTEGER not NULL AUTO_INCREMENT, " +
                 " task_name VARCHAR(255), " +
                 " task_duration INTEGER," +
-                " task_due_date DATE," +
+                " task_date_due DATE," +
+                " task_date_added DATE," +
+                " task_date_completed DATETIME," +
+                " task_complete boolean," +
+                " task_notes VARCHAR(999)," +
                 " date_id INTEGER, " +
                 " category_id INTEGER, " +
                 " FOREIGN KEY (date_id) REFERENCES date(date_id), " +
