@@ -5,16 +5,12 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- *
- * @author RAVEN
- */
-public class Test extends javax.swing.JFrame {
+public class TabJFrame extends JFrame {
 
     /**
      * Creates new form Test
      */
-    public Test() {
+    public TabJFrame() {
         initComponents();
     }
 
@@ -42,7 +38,7 @@ public class Test extends javax.swing.JFrame {
 
         Color BGColor = new FlatDarculaLaf().getDefaults().getColor(this);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         /**
          * JPanel1
@@ -58,7 +54,7 @@ public class Test extends javax.swing.JFrame {
          * JLabel1
          */
         setPanelBackground(jPanel2, BGColor);
-        setLabel(jLabel1, "Tabbed 1");
+        setLabel(jLabel1, "Show tasks due soon, ask to add a task to today, add a symptom, TODO");
         setLayout(jPanel2, jLabel1);
         addTab(materialTabbed1, jPanel2, "Home");
 
@@ -67,27 +63,27 @@ public class Test extends javax.swing.JFrame {
          * JLabel2
          */
         setPanelBackground(jPanel3, BGColor);
-        setLabel(jLabel2, "Tabbed 2");
+        setLabel(jLabel2, "IN COMMENT"); // DAY DATA INCLUDES: Date, Day(ex:Thursday), Start Mood, Hours slept, Energy Level, Start pain level, start stress level, breakfast, lunch, dinner, snacks/other, symptoms checklist, notes, physical activity, medication(includes:name, dosage, time), end mood, day rating, water intake, end pain level, end stress level, CHECKLIST FOR TODAY, SCHEDULE FOR TODAY TIME BLOCK
         setLayout(jPanel3, jLabel2);
-        addTab(materialTabbed1, jPanel3, "Product");
+        addTab(materialTabbed1, jPanel3, "Day");
 
         /**
          * JPanel4
          * JLabel3
          */
         setPanelBackground(jPanel4, BGColor);
-        setLabel(jLabel3, "Tabbed 3");
+        setLabel(jLabel3, "7 days summary page, also include checklist with tasks for this week");
         setLayout(jPanel4, jLabel3);
-        addTab(materialTabbed1, jPanel4, "User");
+        addTab(materialTabbed1, jPanel4, "Week");
 
         /**
          * JPanel5
          * JLabel4
          */
         setPanelBackground(jPanel5, BGColor);
-        setLabel(jLabel4, "Tabbed 4");
+        setLabel(jLabel4, "30 days summary page, also include checklist with tasks for this month");
         setLayout(jPanel5, jLabel4);
-        addTab(materialTabbed1, jPanel5, "Staff");
+        addTab(materialTabbed1, jPanel5, "Month");
 
         /**
          * JPanel1

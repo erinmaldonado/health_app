@@ -2,7 +2,7 @@ package com.myapp;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.myapp.databases.CreateTables;
-import com.myapp.tabbed.Test;
+import com.myapp.tabbed.TabJFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +21,7 @@ public class App {
         createTables.createAllOtherTables();
 
         /* Create and display the form */
-        EventQueue.invokeLater(() -> new Test().setVisible(true));
+        EventQueue.invokeLater(() -> new TabJFrame().setVisible(true));
     }
 
 }
