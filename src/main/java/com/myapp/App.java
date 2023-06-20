@@ -1,11 +1,11 @@
 package com.myapp;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.myapp.databases.*;
-import com.myapp.forms.*;
+import com.myapp.databases.CreateTables;
+import com.myapp.tabbed.Test;
 
 import javax.swing.*;
-import java.sql.SQLException;
+import java.awt.*;
 
 public class App {
     public static void main(String[] args) {
@@ -20,14 +20,8 @@ public class App {
         createTables.createDateCategories();
         createTables.createAllOtherTables();
 
-        JFrame frame = new JFrame("Home");
-        frame.setContentPane(new HomeForm().homePanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null); // Center the frame on the screen
-
-        // Automatically adjust the frame size based on its contents
-        frame.pack();
-        frame.setVisible(true);
+        /* Create and display the form */
+        EventQueue.invokeLater(() -> new Test().setVisible(true));
     }
 
 }
